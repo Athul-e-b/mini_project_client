@@ -1,0 +1,137 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    background-color: #FCF8EC;
+    height: 100vh;
+}
+
+.navbar {
+    width: 100%;
+    height: 7vh;
+    background-color: lightsteelblue;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.title {
+    color: white;
+    margin-left: 3vw;
+}
+
+.menu {
+    margin-right: 8vw;
+    margin-left: 20vw;
+    width: 50vw;
+}
+
+.menu-list .list-item {
+    color: white;
+    list-style: none;
+    display: inline-block;
+    margin: 0vw 1vw;
+}
+
+.links {
+    text-decoration: none;
+    color: white;
+}
+
+.input {
+    color: black;
+}
+
+.banner img {
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    height: fit-content;
+    width: 100%;
+}
+.left {
+
+    height: 40vh;
+    width: 60vw;
+}
+
+.right {
+    text-align: justify;
+    padding: 15px;
+    width: 40vw;
+    height: 40vh;
+}
+
+.right .announcement {
+    height: 50vh;
+    width: 100%;
+}
+
+.right marquee {
+    height: 80%;
+}
+
+.scrolling {
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.red {
+    color: rgb(50, 74, 75);
+}
+
+.green {
+    color: rgb(94, 54, 54);
+}
+
+.yellow {
+    color: rgb(87, 87, 53);
+}
+.horizonta-scrol{
+   margin-top: 5vh;
+   overflow-y: hidden;
+}
+.main-container{
+   margin-top: 1vh;
+    background-color:  #FCF8EC;
+    height: 100%;
+    width: 100%;
+}
+
+
+.login {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    width: 300px;
+    margin: 0 auto;
+}
+input[type="text"], input[type="password"] {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 20px;
+    width: 100%;
+}
+input[type="submit"] {
+    background-color: #008CBA;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+}
+input[type="submit"]:hover {
+    background-color: #006F8C;
+}
+

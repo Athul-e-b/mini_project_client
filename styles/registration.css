@@ -1,0 +1,16 @@
+body {
+    /* background: #007bff; */
+    height: 100vh;
+    background: url(../assets/registration-background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* background: linear-gradient(to right, #0062E6, #33AEFF); */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .title{
+    color : rgb(99, 99, 99);
+  }
