@@ -19,13 +19,25 @@
 
   <img src="./logo.png" alt="">
   <form class="login">
-    <label for="username">Username:</label>
-    <input type="text" id="username" name="username" required><br>
+    <!-- <label for="username">Username:</label> --> 
+    <div class="text-center mb-4">
+      <div class="h3 fw-light">Login</div>
+    </div>
+    <input type="text" id="username" name="username" required style="border: 1px solid #dee2e6;" placeholder="Name"><br>
 
-    <label for="password">Reg no:</label>
-    <input type="text" id="reg_no" name="reg_no" required><br>
+    <!-- <label for="password">Reg no:</label> -->
+    <input type="password" id="reg_no" name="reg_no" required style="border: 1px solid #dee2e6;" placeholder="Pasword"><br>
 
-    <button class="btn btn-primary" type="button" id="loginBtn">Login</button>
+    <div class="d-grid">
+      <button class="btn btn-success btn-lg" id="submitButton" type="button">
+        login <span class="spinner"></span></button>
+    </div>
+
+    <p class="my-3 text-center">Or</p>
+
+              <div class="d-flex justify-content-center text-center">
+                 <a class="link me-1" href="./Register.html">Click here </a> to Register
+              </div>
   </form>
   <script src="../script/login.js" type="module"></script>
 </body>
