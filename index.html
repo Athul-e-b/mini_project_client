@@ -4,65 +4,46 @@
 <head>
   <link rel="stylesheet" href="./style.css">
   <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./assets/fontawesome/css/all.css" />
   <script src="./bootstrap/js/bootstrap.bundle.js"></script>
 </head>
 
 <body>
   <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Home</a>
+      <a class="navbar-brand" href="#"><i class="fa-solid fa-house"></i>Home</a>
       <!--search button-->
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="./components/about.html">about</a>
+      <div class="menu">
+        <ul class="menu-list">
+          <li  class="list-item">
+            <a class="nav-link active"  href="./components/about.html">about</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./components/login.html">Login</a>
+          <li class="list-item">
+            <a class="nav-link active" href="./components/login.html">Login</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./components/Register.html">Registeration</a>
+          <li class="list-item">
+            <a class="nav-link active" href="./components/Register.html">Registeration</a>
           </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Dropdown
-            </a>
-
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li>
-                <hr class="dropdown-divider">
-              </li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              contact
-            </a>
+          <li class="list-item">
+            <a class="nav-link active" href="./components/gallery.html">gallery</i></a>
           </li>
         </ul>
-
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
       </div>
+    </div>
     </div>
   </nav>
   <div>
     <div class="main-container">
       <div class="container">
-        <div class="left">
+        <div class="left w-100">
           <div class="banner">
-            <img src="/assets/logo.png" alt="">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut praesentium sit necessitatibus et
+            <img src="/client/assets/logo.png" alt="">
+            <p class="w-100 h-100">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut praesentium sit
+              necessitatibus et
               suscipit.
               Cumque excepturi inventore sunt deserunt nam, aliquid neque ipsum non, eveniet, quia ducimus
               possimus
@@ -107,31 +88,31 @@
       </div>
     </div>
   </div>
-  <div id="carouselExample" class="carousel slide">
+  <div id="carouselExample" class="carousel_slide">
     <div class="carousel-inner">
-        <div class="carousel-item active">
-            <img src="./assets/img3.jpg" class="d-block w-100" alt="...">
-        </div>
-        <div class="carousel-item">
-            <img src="./assets/img2.jpg" class="d-block w-100" alt="...">
-        </div>
-        <div class="carousel-item">
-            <img src="./assets/photo_2023-04-17_19-02-12.jpg" class="d-block w-100" alt="...">
-        </div>
+      <div class="carousel-item active">
+        <img src="./assets/img3.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="./assets/img2.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="./assets/photo_2023-04-17_19-02-12.jpg" class="d-block w-100" alt="...">
+      </div>
     </div>
-    <button class="carousel-control-prev text-primary" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon text-primary" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
+    <button class="carousel-control-prev text-primary" type="button" data-bs-target="#carouselExample"
+      data-bs-slide="prev">
+      <span class="carousel-control-prev-icon text-primary" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
     </button>
-    <button class="carousel-control-next text-primary" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
+    <button class="carousel-control-next text-primary" type="button" data-bs-target="#carouselExample"
+      data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
     </button>
-</div>
+  </div>
 
-
-  <script src="script.js"
-  src="./script/index.js">
+  <script src="script.js" src="./script/index.js">
   </script>
 </body>
 

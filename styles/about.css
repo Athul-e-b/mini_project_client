@@ -1,0 +1,24 @@
+body{
+   box-sizing: border-box;
+}
+.box {
+    background-color: red;
+    width: 100px;
+    height: 100px;
+    padding:10px;
+    border: 5px solid black;
+    margin-top: 20px;
+    margin-bottom: 60px;
+    
+}
+
+.inner {
+    background-color: yellow;
+    height: 100%;
+    width: 100%;
+}
+.outter{
+    display: flex;
+    justify-content: center;
+    background-color: green;
+}

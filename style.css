@@ -20,14 +20,15 @@ body {
 }
 
 .title {
-    color: white;
+    color: rgb(0, 0, 0);
     margin-left: 3vw;
 }
 
 .menu {
     margin-right: 8vw;
-    margin-left: 20vw;
-    width: 50vw;
+    margin-left: 1vw;
+    width: 100vw;
+    height: 10%;
 }
 
 .menu-list .list-item {
@@ -97,6 +98,7 @@ body {
 .horizonta-scrol{
    margin-top: 5vh;
    overflow-y: hidden;
+
 }
 .main-container{
    margin-top: 1vh;
@@ -134,4 +136,8 @@ input[type="submit"] {
 input[type="submit"]:hover {
     background-color: #006F8C;
 }
+p{
+    font-size: 1rem;
+    text-align: justify;
 
+}

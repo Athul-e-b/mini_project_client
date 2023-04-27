@@ -1,5 +1,5 @@
 import Registration from '../services/service.js'
-const registerBtn = document.getElementById('submitButton')
+const registerForm = document.getElementById('registration')
 const msg = document.getElementById('msg')
 const allInputs = document.querySelectorAll('.form-control')
 const spinner = document.querySelector('.spinner')
@@ -13,11 +13,17 @@ function appendSinner(state){
 }
 
 
-registerBtn.onclick = ()=>{
+// registerBtn.onclick = async ()=>{
+    
+  
+// }
+
+registerForm.addEventListener('submit',async (event)=>{
+    event.preventDefault()
     let data = []
     let message = ''
     let state = false
-    appendSinner(true)
+    
 
     allInputs.forEach(textbox => {
         if (textbox.value === '') {
@@ -30,9 +36,28 @@ registerBtn.onclick = ()=>{
     })
 
     if(!state){
-     
-        Registration(data);
-        msg.innerHTML = `<div class="alert alert-success w-25">Registration succesfull</div>`
+        appendSinner(true)
+       let result = await Registration(data);
+       if(result.status){
+      
+        setTimeout(() => {
+            msg.innerHTML = `<div class="alert alert-success w-25">${result.message}</div>`
+            appendSinner(false)  
+        }, 2000);
+        setTimeout(() => {
+            msg.innerHTML = ''
+            window.location='login.html'
+        }, 4000);
+       }else{
+        setTimeout(() => {
+            msg.innerHTML = `<div class="alert alert-danger w-25">${result.message}</div>`
+            appendSinner(false)  
+        }, 2000);
+        setTimeout(() => {
+            msg.innerHTML = ''
+        }, 4000);
+       }
+       
     }else{
         setTimeout(() => {
             appendSinner(false)
@@ -44,7 +69,5 @@ registerBtn.onclick = ()=>{
     }
 
    
-}
-
-
+})
 

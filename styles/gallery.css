@@ -1,0 +1,29 @@
+.navbar {
+    width: 100%;
+    height: 7vh;
+    background-color: lightsteelblue;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.title {
+    color: rgb(0, 0, 0);
+    margin-left: 3vw;
+}
+
+.menu {
+    margin-right: 8vw;
+    margin-left: 2vw;
+    width: 100vw;
+}
+.menu-list .list-item {
+    color: white;
+    list-style: none;
+    display: inline-block;
+    margin: 0vw 1vw;
+}
+.links {
+    text-decoration: none;
+    color: white;
+}
