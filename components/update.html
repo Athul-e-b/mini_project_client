@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="../assets/fontawesome/css/all.css"/>
+     <link rel="stylesheet" href="../styles/update.css">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <script src="../bootstrap/js/bootstrap.bundle.js"></script>
+    <script src="../script/ajax/jquery.js"></script>
+    <title>Update details</title>
+</head>
+<body>
+   <div class="container mt-4 border border-2 rounded">
+       <h3 class="text-secondary text-center">Update details <i class="fa-solid fa-pen-to-square"></i></h3>
+       <div class="row pb-2">
+        <div class="col-3 p-3 border border-1 border-top-0 border-bottom-0 border-start-0">
+            <div class="">
+                <img src="" id="profile-picture" alt="" class="image rounded-1">
+                <div class="container mt-2 d-flex justify-content-end">
+                    <button id="add-img" class="btn btn-success">Add <i class="fa-solid fa-image"></i> </button>
+                </div>
+                <div class="container mt-2 d-flex justify-content-start flex-column">
+                    <div class="row">
+                        <div class="col-2"><h5 class="text-secondary"><i class="fa-solid fa-user"></i></h5></div>
+                        <div class="col-10"><h5 id="name-display" class="text-secondary">name</h5></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-2"><h5 class="text-secondary"><i class="fa-solid fa-chalkboard-user"></i></h5></div>
+                        <div class="col-10"><h5 id="branch-diplay" class="text-secondary">branch</h5></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-2"><h5 class="text-secondary"><i class="fa-regular fa-id-card"></i></h5></div>
+                        <div class="col-10"><h5 id="rollno-diplay" class="text-secondary">branch</h5></div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+
+        <div class="col-1"></div>
+
+        <div class="col-7">
+            <form id="update-form">
+                <div class="row mt-3">
+                    <div class="col-2"><label class="text-secondary" for="name">Name</label></div>
+                    <div class="col-10"><input type="text" id="name" class="form-control" required></div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-2"><label class="text-secondary" for="register-number">Register no</label></div>
+                    <div class="col-10"><input type="text" id="register-number" class="form-control" required></div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-2"><label class="text-secondary" for="email">Email</label></div>
+                    <div class="col-10"><input type="email" id="email" class="form-control" required></div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-2"><label class="text-secondary" for="phone">Phone</label></div>
+                    <div class="col-10"><input type="text" id="phone" class="form-control" required></div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-2"><label class="text-secondary" for="branch">Branch</label></div>
+                    <div class="col-10"><input type="text" id="branch" class="form-control" required></div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-2"><label class="text-secondary" for="address">Address</label></div>
+                    <div  class="col-10"><textarea type="text" id="address" class="form-control" rows="5" autocomplete="off" required></textarea></div>
+                </div>
+                <div class="row w-100 mt-3 d-flex justify-content-center gap-2">
+                    <input type="file" accept="image/*" id="photo" class="d-none">
+                    <button type="submit" class="btn btn-success w-75">Update <span><i class="fa-regular fa-floppy-disk"></i></span></button>
+                    <button type="reset" class="btn btn-danger w-75">Reset <i class="fa-solid fa-arrows-rotate"></i></button>
+
+                </div>
+            </form>
+        </div>
+
+      </div>
+   </div>
+    <script type="module" src="../script/update.js"></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+.image{
+    height: 40dvh;
+    width: 100%;
+}
+.input-container{
+    margin-top: 2.5dvh;
+  display: flex;
+  align-items: center;
+  gap: 2dvw;
+}

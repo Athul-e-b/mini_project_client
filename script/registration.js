@@ -1,4 +1,4 @@
-import Registration from '../services/service.js'
+import {Registration} from '../services/service.js'
 const registerForm = document.getElementById('registration')
 const msg = document.getElementById('msg')
 const allInputs = document.querySelectorAll('.form-control')
@@ -38,15 +38,15 @@ registerForm.addEventListener('submit',async (event)=>{
     if(!state){
         appendSinner(true)
        let result = await Registration(data);
-       if(result.status){
-      
+       if(result.status){ 
+        window.localStorage.setItem('id',result.id)
         setTimeout(() => {
             msg.innerHTML = `<div class="alert alert-success w-25">${result.message}</div>`
             appendSinner(false)  
         }, 2000);
         setTimeout(() => {
             msg.innerHTML = ''
-            window.location='login.html'
+            window.location='update.html'
         }, 4000);
        }else{
         setTimeout(() => {

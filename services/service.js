@@ -1,37 +1,68 @@
- function post(url,data){
-    let resultData = {}
-   return  Promise.resolve($.ajax({
-        type: 'POST',
-        url,
-        data: { 'body': JSON.stringify(data) },
-        success: (response) => {
-            let result = JSON.parse(response)
-           return {
-               class:'alert-success',
-               message: result.message
-            }
-        },
-        error: (xhr, statusText) => {
-           return {
-               class:'alert-success',
-               message: 'Login failed'
-            }
-        },
-
-    }))
-   
+function post(url, data) {
+  let resultData = {};
+  return Promise.resolve(
+    $.ajax({
+      type: "POST",
+      url,
+      data: { body: JSON.stringify(data) },
+      success: (response) => {
+        let result = JSON.parse(response);
+        return {
+          class: "alert-success",
+          message: result.message,
+        };
+      },
+      error: (xhr, statusText) => {
+        console.log(statusText);
+        return {
+          class: "alert-danger",
+          message: "Operation failed",
+        };
+      },
+    })
+  );
 }
 
-export default async function Registration([name,phone,email,password]){  
-const body = {
+export async function Registration([name, phone, email, password]) {
+  const body = {
     name,
     phone,
     email,
-    password
+    password,
+  };
+  let result = await post(
+    "http://localhost:8080/MINI%20PROJECTS/server/registration.php",
+    body
+  );
+  return JSON.parse(result);
 }
-let result = await  post('http://localhost:8080/MINI%20PROJECTS/server/registration.php',body)
 
-     return JSON.parse(result)
+export async function Login([email, password]) {
+  console.log("login called");
+  const body = {
+    email,
+    password,
+  };
+  let result = await post(
+    "http://localhost:8080/MINI%20PROJECTS/server/login.php",
+    body
+  );
+  console.log(result);
+  return JSON.parse(result);
 }
 
-//'http://localhost:8080/MINI%20PROJECTS/server/registration.php'
+export async function getDetails(id) {
+  const body = {
+    id,
+    operation: "get",
+  };
+  try {
+    const result = await post(
+      "http://localhost:8080/MINI%20PROJECTS/server/getAndUpdate.php",
+      body
+    );
+    return JSON.parse(result);
+  } catch (err) {
+    console.log(JSON.parse(err));
+  }
+}

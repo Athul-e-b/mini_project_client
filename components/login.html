@@ -12,25 +12,29 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
     crossorigin="anonymous"></script>
+  <script src="../script/ajax/jquery.js"></script>
   <link rel="stylesheet" href="../style.css">
 </head>
 
 <body>
-
-  <img src="./logo.png" alt="">
+<div id="login-status"></div>
   <form class="login" id='loginForm'>
     <!-- <label for="username">Username:</label> --> 
     <div class="text-center mb-4">
       <div class="h3 fw-light">Login</div>
     </div>
-    <input type="text" id="username" name="username" required style="border: 1px solid #dee2e6;" placeholder="Name"><br>
+    <input type="email" id="email" name="username" required style="border: 1px solid #dee2e6;" placeholder="Name"><br>
 
     <!-- <label for="password">Reg no:</label> -->
-    <input type="password" id="reg_no" name="reg_no" required style="border: 1px solid #dee2e6;" placeholder="Pasword"><br>
+    <input type="password" id="password" name="password" required style="border: 1px solid #dee2e6;" placeholder="Pasword"><br>
 
     <div class="d-grid">
       <button class="btn btn-success btn-lg" id="submitButton" type="submit">
-        login <span class="spinner"></span></button>
+        login  
+        <span
+        class="spinner">
+      </span>
+      </button>
     </div>
 
     <p class="my-3 text-center">Or</p>
