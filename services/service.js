@@ -5,7 +5,7 @@ function post(url, data) {
       type: "POST",
       url,
       data: { body: JSON.stringify(data) },
-      success: (response) => {
+        success: (response) => {
         let result = JSON.parse(response);
         return {
           class: "alert-success",
@@ -23,6 +23,31 @@ function post(url, data) {
   );
 }
 
+function uploadWithFile(url,formData){
+  return Promise.resolve(
+    $.ajax({
+      type: "POST",
+      url,
+      data: formData,
+      processData: false,
+      contentType: false,
+      success: (response) => {
+        let result = JSON.parse(response);
+        return {
+          class: "alert-success",
+          message: result.message,
+        };
+      },
+      error: (xhr, statusText) => {
+        console.log(statusText);
+        return {
+          class: "alert-danger",
+          message: "Operation failed",
+        };
+      },
+    })
+  );
+}
 export async function Registration([name, phone, email, password]) {
   const body = {
     name,
@@ -65,4 +90,23 @@ export async function getDetails(id) {
   } catch (err) {
     console.log(JSON.parse(err));
   }
+}
+
+export async function updateDetails({id,name,email,phone,branch,regno,address},file){
+  const formData = new FormData()
+  formData.append('id',id)
+  formData.append('name',name)
+   formData.append('email',email)
+   formData.append('phone',phone)
+   formData.append('branch',branch)
+   formData.append('regno',regno)
+   formData.append('address',address)
+   formData.append('file',file)
+   try {
+      let result = await uploadWithFile('http://localhost:8080/MINI%20PROJECTS/server/updateDetails.php',formData)
+      window.localStorage.setItem('path',result)
+      return JSON.parse(result)
+   } catch (error) {
+    console.log(error);
+   }
 }

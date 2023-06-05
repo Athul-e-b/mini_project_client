@@ -19,6 +19,7 @@ loginForm.addEventListener('submit',async (event)=>{
     console.log(result);
     
     if(result.status){ 
+        window.localStorage.setItem("id",result.id)
         setTimeout(() => {
             appendSinner(false)
             loginStatus.innerHTML = `<div class='alert alert-success'>${result.message}</div>`
