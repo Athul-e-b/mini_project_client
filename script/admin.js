@@ -2,6 +2,10 @@ let mark = []
 let id = ''
 const loading = document.getElementById("loader")
 const statusMsg = document.getElementById("update-status")
+
+window.addEventListener('load',()=>{
+    document.getElementById("adminName").innerText = window.localStorage.getItem("adminName")
+})
 document.getElementById("search-form").addEventListener('submit',async (e)=>{
     console.log(document.getElementById("search").value);
     e.preventDefault()
@@ -121,14 +125,12 @@ document.getElementById("update-btn").addEventListener('click',async ()=>{
     }
 })
 
-// let observer = new MutationObserver(function(mutationsList) {
-//     closeBtn = document.querySelectorAll('[data-custom="close-btn"]')
-    
-//   });
-//   let observerConfig = {
-//     childList: true, // Watch for changes to the child nodes
-//     subtree: true // Watch for changes in the entire subtree
-//   };
-//   observer.observe(subjectSection, observerConfig);
+function logout(){
+    window.localStorage.removeItem("id")
+    window.localStorage.removeItem("name")
+    window.localStorage.removeItem("email")
+
+    window.location = 'adminlogin.html'
+}
 
  

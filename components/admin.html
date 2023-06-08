@@ -15,14 +15,23 @@
         <div class="container-fluid">
           <a class="navbar-brand"><h5 class="text-light">Dashboard <i class="fa-solid fa-table-columns"></i></h5></a>
 
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse w-75" id="navbarNavAltMarkup">
-            <div class="navbar-nav ms-auto">
-                <h6 class="text-light">Teachers name</h6>
-            </div>
-          </div>
+         <div class="me-3">
+              <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                  <li class="nav-item dropdown">
+                    <a id="adminName"  class="nav-link dropdown-toggle fs-6 text-light" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                     name
+                    </a>
+                    <ul class="dropdown-menu me-4">
+                      <li><a class="dropdown-item" onclick="logout()">Logout</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+         </div>
       </nav>
 <div class="container" id="alert-msg"></div>
 <form id="search-form"> 

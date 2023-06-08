@@ -110,3 +110,30 @@ export async function updateDetails({id,name,email,phone,branch,regno,address},f
     console.log(error);
    }
 }
+
+export async function adminRegistration([name, email, password]) {
+  const body = {
+    name,
+    email,
+    password,
+  };
+  let result = await post(
+    "http://localhost:8080/MINI%20PROJECTS/server/adminRegistration.php",
+    body
+  );
+  return JSON.parse(result);
+}
+
+export async function adminLogin([email, password]) {
+  console.log("login called");
+  const body = {
+    email,
+    password,
+  };
+  let result = await post(
+    "http://localhost:8080/MINI%20PROJECTS/server/adminLogin.php",
+    body
+  );
+  console.log(result);
+  return JSON.parse(result);
+}
