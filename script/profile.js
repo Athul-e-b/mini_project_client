@@ -26,6 +26,7 @@ window.addEventListener('load',async()=>{
               document.getElementById("address").innerText = result.data?.address
               result.data.mark === "" ? studentMark = [] : studentMark = JSON.parse(result.data.mark)
               createMarkTable(studentMark)
+              setTotalMark(studentMark)
               console.log(studentMark);
 
            }catch(err){
@@ -99,4 +100,21 @@ function createMarkTable(markDetails){
   console.log(root);  
 }
 
-console.log(studentMark);
+function setTotalMark(totalMarks){
+  const totalMarksArray = []
+  let fullTotal = 0
+    totalMarks.forEach(elem=>{
+         fullTotal = 0
+        elem.mark_details.forEach(e=>{
+            let sum = parseFloat(e.mark) + parseFloat(e.cmark)
+            fullTotal += sum
+        })
+        totalMarksArray.push(fullTotal)
+    })
+   document.getElementById("sem1").innerText = totalMarksArray[0] || '-----'
+   document.getElementById("sem2").innerText = totalMarksArray[1] || '-----'
+   document.getElementById("sem3").innerText = totalMarksArray[2] || '-----'
+   document.getElementById("sem4").innerText = totalMarksArray[3] || '-----'
+   document.getElementById("sem5").innerText = totalMarksArray[4] || '-----'
+   document.getElementById("sem6").innerText = totalMarksArray[5] || '-----'
+}
