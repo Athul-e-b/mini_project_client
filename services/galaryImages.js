@@ -1,6 +1,7 @@
 const pictures=[
     {   id:'1',
-        url:'../img/gallery-img/1.jpg'
+        url:'../img/gallery-img/1.jpg',
+        dec:'abcd'
     },
     {   idL:'2',
         url:'../img/gallery-img/2.jpg'
@@ -11,17 +12,11 @@ const pictures=[
     {   id:'4',
         url:'../img/gallery-img/4.jpg'
     },
-    {id:'5',
-        url:'../img/gallery-img/5.jpg'
-    },
     {id:'6',
         url:'../img/gallery-img/6.jpg'
     },
     {id:'7',
         url:'../img/gallery-img/7.jpg'
-    },
-    {id:'8',
-        url:'../img/gallery-img/8.jpg'
     },
     {id:'9',
         url:'../img/gallery-img/9.jpg'
@@ -40,9 +35,6 @@ const pictures=[
     },
     {id:'14',
         url:'../img/gallery-img/14.jpg'
-    },
-    {id:'15',
-        url:'../img/gallery-img/15.jpg'
     },
     {id:'16',
         url:'../img/gallery-img/16.jpg'
@@ -72,3 +64,79 @@ const pictures=[
         url:'../img/gallery-img/24.jpg'
     },
 ]
+
+export function shuffleArray() {
+   return pictures.sort(function() {
+        return Math.random() - 0.5;
+      });
+  }
+
+  export function imageTags(classes){
+  let shuffledPictures = pictures.sort(function() {
+        return Math.random() - 0.5;
+      });
+   let imagesTagsArray = []   
+      shuffledPictures.forEach(images=>{
+          let imgTag = document.createElement('img')
+          imgTag.classList.add(...classes)
+          imgTag.src = images.url
+          imagesTagsArray.push(imgTag)
+      })
+    return imagesTagsArray
+  }
+
+ let studentMath = []
+  export default studentMath = [
+    {
+        sem:1,
+        mark_details:[
+            {
+                subject:"A",
+                mark:100,
+                cmark:50
+            },
+            {
+                subject:"B",
+                mark:90,
+                cmark:40
+            },
+            {
+                subject:"C",
+                mark:95,
+                cmark:48
+            },
+            {
+                subject:"D",
+                mark:94,
+                cmark:41
+            },
+        ]
+    },
+    {
+        sem:2,
+        mark_details:[
+            {
+                subject:"A",
+                mark:100,
+                cmark:50
+            },
+            {
+                subject:"C",
+                mark:95,
+                cmark:48
+            },
+            {
+                subject:"D",
+                mark:94,
+                cmark:41
+            },
+            {
+                subject:"B",
+                mark:90,
+                cmark:40
+            },
+        ]
+    },
+  ]
+
+ 

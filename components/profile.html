@@ -4,9 +4,181 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/fontawesome/css/all.css"/>
+    <link rel="stylesheet" href="../styles/profile.css">
+   <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+   <script src="../bootstrap/js/bootstrap.bundle.js"></script>
+   <script src="../script/ajax/jquery.js"></script>
     <title>Profile</title>
 </head>
-<body>
-    <h1>profile</h1>
+<body id="body">
+    <nav class="navbar navbar-expand-lg bg-primary">
+        <div class="container-fluid">
+          <a class="navbar-brand text-light">Profile <i class="fa-solid fa-user-tie"></i> </a>
+
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav ms-auto">
+              <a class="nav-link text-light" aria-current="page" href="../index.html">Home</a>
+              <a class="nav-link text-light" href="gallery.html">Gallery</a>
+              <a class="nav-link text-light" href="update.html">Update details</a>
+              <a class="nav-link text-light" data-bs-toggle="modal" data-bs-target="#exampleModal">Log out</a>
+            </div>
+          </div>
+      </nav>
+
+    <div class="row mt-3 mx-5">
+        <div class="col-md-4 col-lg-4 col-sm-12 shadow border border-1 rounded image-card">
+          <div class="container mt-3 image">
+            <img src="../assets/profile-picture.jpg" id="profile-image" class="rounded-2" alt="">
+          </div>
+         <div class="row">
+        <div class="col-8">
+              <h5 id="display-name" class="text-secondary mt-2 ms-3">Name</h5>
+              <h5 id="display-regno" class="text-secondary ms-3">register number</h5>
+              <h5 id="display-branch" class="text-secondary ms-3">branch</h5>
+        </div>
+        <div class="col-4">
+          <a href="update.html" class="btn btn-success mt-4">Edit</a>
+        </div>
+         </div>
+        </div>
+        <div class="col-md-1 col-sm-1 col-lg-1"></div>
+        <div class="col-md-7 col-sm-12 col-lg-7 mt-sm-4 border border-1 rounded shadow">
+          <h4 class="text-secondary text-center mt-2">Student Profile <i class="fa-solid fa-graduation-cap"></i></h4>
+          <div class="container">
+            <div class="row">
+              <div class="col-6">
+                <div class="row mt-2">
+                   <div class="col-5"><h5 class="text-secondary">Name <i class="fa-solid fa-user-large ms-1"></i></h5></div>
+                   <div class="col-7"><h5 id="name" class="text-secondary"></h5></div>
+                </div>
+                <div class="row mt-2">
+                   <div class="col-5"><h5 class="text-secondary">Roll no <i class="fa-solid fa-hashtag"></i></h5></div>
+                   <div class="col-7"><h5 id="regno" class="text-secondary"></h5></div>
+                </div>
+                <div class="row mt-2">
+                   <div class="col-5"><h5 class="text-secondary">Branch <i class="fa-solid fa-chalkboard"></i></h5></div>
+                   <div class="col-7"><h5 id="banch" class="text-secondary"></h5></div>
+                </div>
+                <div class="row mt-2">
+                   <div class="col-5"><h5 class="text-secondary">Phone <i class="fa-solid fa-mobile-screen"></i></h5></div>
+                   <div class="col-7"><h5 id="phone" class="text-secondary"></h5></div>
+                </div>
+                <div class="row mt-2">
+                   <div class="col-5"><h5 class="text-secondary">Email <i class="fa-regular fa-envelope"></i></h5></div>
+                   <div class="col-7"><h5 id="email" class="text-secondary"></h5></div>
+                </div>
+                <div class="row mt-2">
+                   <div class="col-5"><h5 class="text-secondary">Address <i class="fa-regular fa-address-card"></i></h5></div>
+                   <div class="col-7"><h5 id="address" class="text-secondary"></h5></div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="accordion accordion-flush" id="accordionFlushExample">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#s1" aria-expanded="false" aria-controls="flush-collapseOne">
+                        Semester #1
+                      </button>
+                    </h2>
+                    <div id="s1" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                      <div  id="sem1" class="accordion-body"> 
+                        <p>Total mark</p>
+                        <p>Attentence</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#s2" aria-expanded="false" aria-controls="flush-collapseTwo">
+                        Semester #2
+                      </button>
+                    </h2>
+                    <div id="s2" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                      <div id="sem2" class="accordion-body"></div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="s3">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#s3" aria-expanded="false" aria-controls="flush-collapseThree">
+                        Semester #3
+                      </button>
+                    </h2>
+                    <div id="s3" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                      <div id="sem3" class="accordion-body">.</div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#s4" aria-expanded="false" aria-controls="flush-collapseThree">
+                        Semester #4
+                      </button>
+                    </h2>
+                    <div id="s4" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                      <div id="sem4" class="accordion-body"></div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#s5" aria-expanded="false" aria-controls="flush-collapseThree">
+                        Semester #5
+                      </button>
+                    </h2>
+                    <div id="s5" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                      <div id="sem5" class="accordion-body"></div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#s6" aria-expanded="false" aria-controls="flush-collapseThree">
+                        Semester #6
+                      </button>
+                    </h2>
+                    <div id="s6" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                      <div id="sem6" class="accordion-body"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+<div class="container mt-5">
+  <h3 class="text-secondary text-center mb-4">Semester Mark Details</h3>
+  <div class="row">
+    <div class="col-1"></div>
+    <div id="root" class="col-10 mb-3">
+      <!-- table display here -->
+    </div>
+    <div class="col-1"></div>
+  </div>
+</div>
+    
+    <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog  modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header border-bottom-0">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Logout </h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Are you sure want to logout
+        </div>
+        <div class="modal-footer border-top-0">
+          <button type="button" class="btn btn-success" data-bs-dismiss="modal">No</button>
+          <button id="logout-btn" onclick="logout()" type="button" class="btn btn-danger">yes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="module" src="../script/profile.js"></script>
+  
 </body>
 </html>

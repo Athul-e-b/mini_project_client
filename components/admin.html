@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/fontawesome/css/all.css">
+    <script src="../bootstrap/js/bootstrap.bundle.js"></script>
+    <title>Admin dashboard</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-primary">
+        <div class="container-fluid">
+          <a class="navbar-brand"><h5 class="text-light">Dashboard <i class="fa-solid fa-table-columns"></i></h5></a>
+
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse w-75" id="navbarNavAltMarkup">
+            <div class="navbar-nav ms-auto">
+                <h6 class="text-light">Teachers name</h6>
+            </div>
+          </div>
+      </nav>
+
+    <div class="container mt-5 d-flex justify-content-center w-75">
+       <div class="border border-5 rounded-5 w-75 d-flex flex-row"> 
+        <input type="text" placeholder="Search Student" id="search" class="form-control border rounded-5 border-0 text-secondary" style="outline: none; outline-color: ;">
+        <button class="btn ms-2 btn-light border border-0 rounded-5"><i class="fa-solid fa-magnifying-glass text-primary"></i></button>
+    </div>
+    </div>
+
+    <div class="container mt-5"><h3 class="text-secondary text-center">Student details</h3></div>
+    <script src="../script/admin.js"></script>
+</body>
+</html>

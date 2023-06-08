@@ -1,114 +1,387 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./index.css" />
+    <script src="./bootstrap/js/bootstrap.bundle.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
 
-<head>
-  <link rel="stylesheet" href="./style.css">
-  <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
-  <link rel="stylesheet" href="./assets/fontawesome/css/all.css" />
-  <script src="./bootstrap/js/bootstrap.bundle.js"></script>
-</head>
+    <title>Home</title>
+  </head>
+  <body id="root">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top " id="mainNav" style="position: fixed; background-color: rgb(176, 226, 255);opacity: 0.7;">
 
-<body>
-  <nav class="navbar navbar-expand-lg">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#"><i class="fa-solid fa-house"></i>Home</a>
-      <!--search button-->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="menu">
-        <ul class="menu-list">
-          <li  class="list-item">
-            <a class="nav-link active"  href="./components/about.html">about</a>
-          </li>
-          <li class="list-item">
-            <a class="nav-link active" href="./components/login.html">Login</a>
-          </li>
-          <li class="list-item">
-            <a class="nav-link active" href="./components/Register.html">Registeration</a>
-          </li>
-          <li class="list-item">
-            <a class="nav-link active" href="./components/gallery.html">gallery</i></a>
-          </li>
-        </ul>
+      <div class="container px-4 px-lg-5">
+        <a class="navbar-brand text-light" href="#page-top"><img src="/client/img/logo.png" alt=""></a>
+        <button
+          class="navbar-toggler navbar-toggler-right"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarResponsive"
+          aria-controls="navbarResponsive"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          Menu
+          <i class="fas fa-bars"></i>
+        </button>
+        <a class="navbar-brand text-dark-emphasis" href="/client/index.html">Home</a>
+        <div  class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a 
+                class="nav-link text-dark-emphasis"
+                href="/client/components/about.html"
+                >About</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link text-dark-emphasis"
+                href="/client/components/gallery.html"
+                >Gallery</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link text-dark-emphasis"
+                href="/client/components/contact.html"
+                >contact</a
+              >
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle text-dark-emphasis"
+                id="navbarDropdown"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                >Profile</a
+              >
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <a class="dropdown-item" href="components/principal.html"
+                    >principal</a
+                  >
+                </li>
+
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="/client/components/admission.html"
+                    >Admission</a
+                  >
+                </li>
+
+                <li>
+                  <a class="dropdown-item" href="/client/components/"
+                    >Management</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle text-dark-emphasis"
+                id="navbarDropdown"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                >Login</a
+              >
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <a class="dropdown-item" href="components/login.html"
+                    >Student login</a
+                  >
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="#!">Teachers login</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-    </div>
-  </nav>
-  <img src="/client/assets/logo.png" alt="">
-  <div>
-    <div class="main-container">
-      <div class="container">
-        <div class="left w-100">
-          <div class="banner">
-            <img src="/client/assets/logo.png" alt="">
-            <Institute class="w-100 h-100">
-              <i>Institute of Human Resources Development (IHRD) is an autonomous educational institution established by the Government of Kerala in 1987. The institute is registered under The Travancore – Cochin Literary, Scientific and Charitable societies registrations Act 12 of 1955. The management of the institute is vested with a Governing Body composed of with the Hon’ble Minister of Higher Education, Government of Kerala, as the Chairman and Chief Secretary to Government of Kerala as the Vice-Chairman.</i>
-              Institute of Human Resources Development is dedicated to the scientific advancement, technological progress and economic growth of the country through human resources development. Based on the principle, "Think Globally and Act Locally" it endeavours to bring about the welfare of the nation. It endeavours to provide education and training of consistently high standard through innovative and versatile programmes suitable for the current and emerging needs of the community.
+    </nav>
+    <!-- Masthead-->
+    <header class="masthead">
+      <div
+        class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center"
+      >
+        <div class="d-flex justify-content-center">
+          <div class="text-center">
+            <h1 class="mx-auto my-0 text-uppercase">K K M M P T C</h1>
+            <h2 class="text-white-50 mx-auto mt-2 mb-5"></h2>
+            <a class="btn btn-primary" href="./components/Register.html"
+              >student Registeration</a
+            >
           </div>
         </div>
-        <div class="right red">
-          <div class="announcement">
+      </div>
+    </header>
 
-            <marquee behavior="" direction="up">
-              <div class="scrolling red">
-                <img src="./img/new.gif" alt="">
-                "Applications invited for the following IHRD Course of PGDCA, PGDED, PGDCF, ADBME, DCA,
-                DCFA,
-                DLSM, CCNA, CCLIS, DDTOA - January 2023"
-              </div>
-              <div class="scrolling green">
-                <img src="./img/new.gif" alt="">
-                "I/II Semester PGDCA/ DDTOA / DCA/ CCLIS/ DCFA / PGDCF / Regular/Supplementary 2018, 2020 &
-                2021
-                scheme Examinations are scheduled to conduct during February 2023"
-              </div>
-              <div class="scrolling yellow">
-                <img src="./img/new.gif" alt="">
-                <a href="/index.php/ihrd-courses/ihrd-examination-results">Result for examination conducted
-                  PGDCF, PGDCA, DDTOA, DCA & CCLIS</a>
-              </div>
-            </marquee>
+    <section class="projects-section bg-light" id="projects">
+      <div class="container px-4 px-lg-5">
+        <!-- Featured Project Row-->
+        <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
+          <div class="col-xl-8 col-lg-7">
+            <img
+              class="img-fluid mb-3 mb-lg-0"
+              src="./img/gallery-img/2.jpg"
+              alt="..."
+            />
+          </div>
+          <div class="col-xl-4 col-lg-5">
+            <div class="featured-text text-center text-lg-left">
+              <h3 class="sp-module-title">Welcome to College</h3>
+              <p style="text-align: justify" class="text-black-50 mb-0">
+                K. Karunakaran Memorial Model Polytechnic College, Mala,
+                Kallettumkara, established in the year 1993, a pioneer institute
+                in the field of Technical education is a Government aided
+                institution under IHRD approved by AICTE. This aids it to have a
+                flexible curriculum and updated syllabi. The institution has an
+                effective Placement Cell dedicated for strengthening the
+                interaction between Institute and Industry. The cell is very
+                effectively engaged in developing the students in all needed
+                skills and placing in top companies.The polytechnic college has
+                the best laboratories with free access to the students and
+                prepares them with the latest method of learning industrial
+                practices. The industrial training programme ,compulsory for all
+                courses provides exposure to the students in current industrial
+                practices,Faculty at the institution are among the most
+                experienced. The dedication of the faculty and handling of
+                curriculum provide the students with an in depth knowledge in
+                their fundamentals and applications including current trends in
+                industries.Today the polytechnic has the student strength of
+                nearly 700
+              </p>
+            </div>
           </div>
         </div>
       </div>
-      <div class="horizonta-scrol">
-        <marquee behavior="" direction="left">
-          <a href="admission.html">
-            " Applications invited for the following IHRD Course of PGDCA, PGDED, PGDCF, ADBME, DCA, DCFA, DLSM,
-            CCNA, CCLIS, DDTOA - January 2023"
-          </a>
-        </marquee>
+    </section>
+   <!-- Carousel wrapper -->
+<div
+id="carouselMultiItemExample"
+class="carousel slide carousel-dark text-center"
+data-mdb-ride="carousel"
+>
+<!-- Controls -->
+<div class="d-flex justify-content-center mb-4">
+  <button
+    class="carousel-control-prev position-relative"
+    type="button"
+    data-mdb-target="#carouselMultiItemExample"
+    data-mdb-slide="prev"
+  >
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button
+    class="carousel-control-next position-relative"
+    type="button"
+    data-mdb-target="#carouselMultiItemExample"
+    data-mdb-slide="next"
+  >
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+<!-- Inner -->
+<div class="carousel-inner py-4">
+  <!-- Single item -->
+  <div class="carousel-item active">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="card">
+            <img
+              src="/client/img/WhatsApp Image 2022-06-14 at 3.12.06 PM(1).jpeg"
+              class="card-img-top"
+              alt="Waterfall"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Achievements</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up the bulk
+                of the card's content.
+              </p>
+             
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 d-none d-lg-block">
+          <div class="card">
+            <img
+              src="/client/img/WhatsApp Image 2022-06-14 at 3.12.05 PM.jpeg"
+              class="card-img-top"
+              alt="Sunset Over the Sea"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up the bulk
+                of the card's content.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 d-none d-lg-block">
+          <div class="card">
+            <img
+              src="/client/img/WhatsApp Image 2022-06-14 at 3.13.14 PM.jpeg"
+              class="card-img-top"
+              alt="Sunset over the Sea"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up the bulk
+                of the card's content.
+              </p>
+            </div>
+          </div>
+        </div>
+        
       </div>
     </div>
   </div>
-  <div id="carouselExample" class="carousel_slide">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="./assets/img3.jpg" class="d-block w-100" alt="...">
-      </div>
-      <div class="carousel-item">
-        <img src="./assets/img2.jpg" class="d-block w-100" alt="...">
-      </div>
-      <div class="carousel-item">
-        <img src="./assets/photo_2023-04-17_19-02-12.jpg" class="d-block w-100" alt="...">
+
+  <!-- Single item -->
+  <div class="carousel-item">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-md-12">
+          <div class="card">
+            <img
+              src="https://mdbcdn.b-cdn.net/img/new/standard/nature/184.webp"
+              class="card-img-top"
+              alt="Fissure in Sandstone"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up the bulk
+                of the card's content.
+              </p>
+              <a href="#!" class="btn btn-primary">Button</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 d-none d-lg-block">
+          <div class="card">
+            <img
+              src="https://mdbcdn.b-cdn.net/img/new/standard/nature/185.webp"
+              class="card-img-top"
+              alt="Storm Clouds"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up the bulk
+                of the card's content.
+              </p>
+              <a href="#!" class="btn btn-primary">Button</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 d-none d-lg-block">
+          <div class="card">
+            <img
+              src="https://mdbcdn.b-cdn.net/img/new/standard/nature/186.webp"
+              class="card-img-top"
+              alt="Hot Air Balloons"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up the bulk
+                of the card's content.
+              </p>
+              <a href="#!" class="btn btn-primary">Button</a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <button class="carousel-control-prev text-primary" type="button" data-bs-target="#carouselExample"
-      data-bs-slide="prev">
-      <span class="carousel-control-prev-icon text-primary" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next text-primary" type="button" data-bs-target="#carouselExample"
-      data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
   </div>
 
-  <script src="./script/script.js" src="./script/index.js">
-  </script>
-</body>
+  <!-- Single item -->
+  <div class="carousel-item">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+          <div class="card">
+            <img
+              src="https://mdbcdn.b-cdn.net/img/new/standard/nature/187.webp"
+              class="card-img-top"
+              alt="Peaks Against the Starry Sky"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up the bulk
+                of the card's content.
+              </p>
+              <a href="#!" class="btn btn-primary">Button</a>
+            </div>
+          </div>
+        </div>
 
+        <div class="col-lg-4 mb-4 mb-lg-0 d-none d-lg-block">
+          <div class="card">
+            <img
+              src="https://mdbcdn.b-cdn.net/img/new/standard/nature/188.webp"
+              class="card-img-top"
+              alt="Bridge Over Water"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up the bulk
+                of the card's content.
+              </p>
+              <a href="#!" class="btn btn-primary">Button</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 mb-4 mb-lg-0 d-none d-lg-block">
+          <div class="card">
+            <img
+              src="https://mdbcdn.b-cdn.net/img/new/standard/nature/189.webp"
+              class="card-img-top"
+              alt="Purbeck Heritage Coast"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up the bulk
+                of the card's content.
+              </p>
+              <a href="#!" class="btn btn-primary">Button</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Inner -->
+</div>
+<!-- Carousel wrapper -->
+<script src="./script/index.js"></script>
+  </body>
 </html>

@@ -4,231 +4,80 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/fontawesome/css/all.css"/>
     <link rel="stylesheet" href="../styles/gallery.css">
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
-   
-    <title>gallery</title>
+    <script src="../bootstrap/js/bootstrap.bundle.js" ></script>
+    <title>Gallery</title>
 </head>
 <body>
-  <img src="../img/gallery-img/1.jpg" alt="">
-    <nav class="navbar">
-        <h2 class="title">Gallery</h2>
-        <div class="menu">
-            <ul class="menu-list">
-                <li class="list-item"><a class="links" href="/client/index.html">home</a></li>
-                <li class="list-item"><a class="links" href="/client/components/about.html">about</a></li>
-                <li class="list-item"><a class="links" href="/client/components/contact.html">contact us</a></li>
-            </ul>
-        </div>
-    </nav>
-    <img src="../assets/logo.png" alt="">
+  <nav class="navbar navbar-expand-lg bg-primary position-sticky top-0">
+    <div class="container-fluid">
+      <a class="navbar-brand text-light">Profile <i class="fa-solid fa-user-tie"></i> </a>
 
-	<!-- Carousel wrapper -->
-<div id="carouselBasicExample" class="carousel slide carousel-fade" data-mdb-ride="carousel">
-  <!-- Indicators -->
-  <div class="carousel-indicators">
-    <button
-      type="button"
-      data-mdb-target="#carouselBasicExample"
-      data-mdb-slide-to="0"
-      class="active"
-      aria-current="true"
-      aria-label="Slide 1"
-    ></button>
-    <button
-      type="button"
-      data-mdb-target="#carouselBasicExample"
-      data-mdb-slide-to="1"
-      aria-label="Slide 2"
-    ></button>
-    <button
-      type="button"
-      data-mdb-target="#carouselBasicExample"
-      data-mdb-slide-to="2"
-      aria-label="Slide 3"
-    ></button>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ms-auto">
+          <a class="nav-link text-light" aria-current="page" href="../index.html">Home</a>
+          <a class="nav-link text-light" href="gallery.html">Gallery</a>
+          <a class="nav-link text-light" href="update.html">Update details</a>
+          <a class="nav-link text-light" data-bs-toggle="modal" data-bs-target="#exampleModal">Log out</a>
+        </div>
+      </div>
+  </nav>
+
+<!-- Gallery -->
+<!-- <div class="row mx-5 mt-4">
+  <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+    <img
+      image
+      class="w-100 shadow-1-strong rounded mb-4"
+      alt="Boat on Calm Water"
+    />
+
+    <img
+      image
+      class="w-100 shadow-1-strong rounded mb-4"
+      alt="Wintry Mountain Landscape"
+    />
   </div>
 
-  <!-- Inner -->
-  <div class="carousel-inner">
-    <!-- Single item -->
-    <div class="carousel-item active">
-      <img src="/client/img/gallery-img/edf6973a-0341-4d10-8f3a-aae8070383b5.jpg" class="d-block w-100" alt="Sunset Over the City"/>
-      <div class="carousel-caption d-none d-md-block">
-        <h5>KKMMPTC MALA</h5>
-        <a href="#">click</a>
-      </div>
-    </div>
+  <div class="col-lg-4 mb-4 mb-lg-0">
+    <img
+      image
+      class="w-100 shadow-1-strong rounded mb-4"
+      alt="Mountains in the Clouds"
+    />
 
-    <!-- Single item -->
-    <div class="carousel-item">
-      <img src="/client/assets/photo_6332088461250640433_y.jpg" class="d-block w-100" alt="Canyon at Nigh"/>
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Second slide label</h5>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      </div>
-    </div>
-
-    <!-- Single item -->
-    <div class="carousel-item">
-      <img src="https://mdbcdn.b-cdn.net/img/Photos/Slides/img%20(23).webp" class="d-block w-100" alt="Cliff Above a Stormy Sea"/>
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Third slide label</h5>
-        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-      </div>
-    </div>
+    <img
+      image
+      class="w-100 shadow-1-strong rounded mb-4"
+      alt="Boat on Calm Water"
+    />
   </div>
-  <!-- Inner -->
 
-  <!-- Controls -->
-  <button class="carousel-control-prev" type="button" data-mdb-target="#carouselBasicExample" data-mdb-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-mdb-target="#carouselBasicExample" data-mdb-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
-<!-- Carousel wrapper -->
+  <div class="col-lg-4 mb-4 mb-lg-0">
+    <img
+     image
+      class="w-100 shadow-1-strong rounded mb-4"
+      alt="Waves at Sea"
+    />
 
-   <!-- Modal gallery -->
-<section class="">
-    <!-- Section: Images -->
-    <section class="">
-      <div class="row">
-        <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
-          <div
-            class="bg-image hover-overlay ripple shadow-1-strong rounded"
-            data-ripple-color="light"
-          >
-            <img
-              src="/client/img/gallery-img/photo_6332088461250640433_y.jpg"
-              class="w-100"
-            />
-            <a href="#!" data-mdb-toggle="modal" data-mdb-target="#exampleModal1">
-              <div class="fa-mask" style="background-color: rgba(251, 251, 251, 0.2);"></div>
-            </a>
-          </div>
-        </div>
+    <img
+   image      
+   class="w-100 shadow-1-strong rounded mb-4"
+      alt="Yosemite National Park"
+    />
+  </div>
   
-        <div class="col-lg-4 mb-4 mb-lg-0">
-          <div
-            class="bg-image hover-overlay ripple shadow-1-strong rounded"
-            data-ripple-color="light"
-          >
-            <img
-              src="/client/img/gallery-img/280277397_528298005403842_2938822128872073416_n.jpg"
-              class="w-100"
-            />
-            <a href="#!" data-mdb-toggle="modal" data-mdb-target="#exampleModal2">
-              <div class="mask" style="background-color: rgba(251, 251, 251, 0.2);"></div>
-            </a>
-          </div>
-        </div>
-  
-        <div class="col-lg-4 mb-4 mb-lg-0">
-          <div
-            class="bg-image hover-overlay ripple shadow-1-strong rounded"
-            data-ripple-color="light"
-          >
-            <img
-              src="/client/assets/edf6973a-0341-4d10-8f3a-aae8070383b5.jpg"
-              class="w-100"
-            />
-            <a href="#!" data-mdb-toggle="modal" data-mdb-target="#exampleModal3">
-              <div class="mask" style="background-color: rgba(251, 251, 251, 0.2);"></div>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Section: Images -->
-  
-    <!-- Section: Modals -->
-    <section class="">
-      <!-- Modal 1 -->
-      <div
-        class="modal fade"
-        id="exampleModal1"
-        tabindex="-1"
-        aria-labelledby="exampleModal1Label"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog modal-lg">
-          <div class="modal-content">
-            <div class="ratio ratio-16x9">
-              <iframe
-                src="https://www.youtube.com/embed/A3PDXmYoF5U"
-                title="YouTube video"
-                allowfullscreen
-              ></iframe>
-            </div>
-  
-            <div class="text-center py-3">
-              <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">
-                Close
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Modal 2 -->
-      <div
-        class="modal fade"
-        id="exampleModal2"
-        tabindex="-1"
-        aria-labelledby="exampleModal2Label"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog modal-lg">
-          <div class="modal-content">
-            <div class="ratio ratio-16x9">
-              <iframe
-                src="https://www.youtube.com/embed/wTcNtgA6gHs"
-                title="YouTube video"
-                allowfullscreen
-              ></iframe>
-            </div>
-  
-            <div class="text-center py-3">
-              <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">
-                Close
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Modal 3 -->
-      <div
-        class="modal fade"
-        id="exampleModal3"
-        tabindex="-1"
-        aria-labelledby="exampleModal3Label"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog modal-lg">
-          <div class="modal-content">
-            <div class="ratio ratio-16x9">
-              <iframe
-                src="https://www.youtube.com/embed/vlDzYIIOYmM"
-                title="YouTube video"
-                allowfullscreen
-              ></iframe>
-            </div>
-  
-            <div class="text-center py-3">
-              <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">
-                Close
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Section: Modals -->
-  </section>
-  <!-- Modal gallery -->
-  <script src="../bootstrap/js/bootstrap.bundle.js" ></script>
+</div> -->
+<div id="root"></div>
+<!-- Gallery -->
+
+
+<script type="module" src="../script/galary.js"></script>
 </body>
 </html>

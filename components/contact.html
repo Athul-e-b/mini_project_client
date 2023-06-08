@@ -1,50 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../styles/contact.css" />
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../assets/fontawesome/css/all.css" />
+    <script src="../bootstrap/js/bootstrap.bundle.js"></script>
+  </head>
 
-<head>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="/client/style.css">
-    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
-    <script src="./bootstrap/js/bootstrap.bundle.js"></script>
-</head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container px-4 px-lg-5">
+        <a class="navbar-brand text-light" href="#page-top">KKMMPTC</a>
+        <button
+          class="navbar-toggler navbar-toggler-right"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarResponsive"
+          aria-controls="navbarResponsive"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          Menu
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a
+                class="nav-link text-light"
+                href="/client/components/about.html"
+                >About</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link text-light"
+                href="/client/components/gallery.html"
+                >Gallery</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link text-light"
+                href="/client/components/contact.html"
+                >contact</a
+              >
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                id="navbarDropdown"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                >Profile</a
+              >
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="components/principal.html">principal</a></li>
 
-<body>
-    <nav class="navbar navbar-expand-lg position-fixed" style="top:0;">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Home</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">about</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="login.html">Login</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Dropdown
-                </a>
+                <li><a class="dropdown-item" href="/client/components/admission.html">Admission</a></li>
 
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-              </li>
-            </ul>
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
-          </div>
+                <li><a class="dropdown-item" href="/client/components/">Management</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                id="navbarDropdown"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                >Login</a
+              >
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="components/login.html">Student login</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="#!">Teachers login</a></li>
+              </ul>
+            </li>
+          </ul>
         </div>
-      </nav>
-    <img src="../assets/logo.png" alt="">
-    <script src="./script/script.js"></script>
-</body>
+      </div>
+    </nav>
 
+    <script src="./script/script.js"></script>
+  </body>
 </html>

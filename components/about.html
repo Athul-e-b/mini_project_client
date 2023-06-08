@@ -1,206 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../styles/about.css" />
+    <link rel="stylesheet" href="../index.css" />
+    <script src="../bootstrap/js/bootstrap.bundle.js"></script>
+    <title>Document</title>
+  </head>
 
-<head>
-  <link rel="stylesheet" href="../style.css">
-  <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
-  <link rel="stylesheet" href="../styles/about.css">
-  <script src="../bootstrap/js/bootstrap.bundle.js"></script>
-  <title>Document</title>
-</head>
+  <body>
+    <nav
+      class="navbar py-5 navbar-expand-lg navbar-light fixed-top"
+      id="mainNav"
+      style="position: fixed; background-color: rgba(176, 226, 255, 0.7)"
+    >
+      <div class="container px-4 px-lg-5">
+        <a class="navbar-brand text-light" href="#page-top"
+          ><img src="/client/img/logo.png" alt=""
+        /></a>
+        <button
+          class="navbar-toggler navbar-toggler-right"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarResponsive"
+          aria-controls="navbarResponsive"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          Menu
+          <i class="fas fa-bars"></i>
+        </button>
+        <a class="navbar-brand text-light" href="/client/index.html">Home</a>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a
+                class="nav-link text-light"
+                href="/client/components/about.html"
+                >About</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link text-light"
+                href="/client/components/gallery.html"
+                >Gallery</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link text-light"
+                href="/client/components/contact.html"
+                >contact</a
+              >
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle text-light"
+                id="navbarDropdown"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                >Profile</a
+              >
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <a class="dropdown-item" href="components/principal.html"
+                    >principal</a
+                  >
+                </li>
 
-<body>
-  <nav class="navbar navbar-expand-lg pt-2">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="/client/index.html"><i class="fa-solid fa-house"></i>Home</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">about</a>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="/client/components/admission.html"
+                    >Admission</a
+                  >
+                </li>
+
+                <li>
+                  <a class="dropdown-item" href="/client/components/"
+                    >Management</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle text-light"
+                id="navbarDropdown"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                >Login</a
+              >
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <a class="dropdown-item" href="components/login.html"
+                    >Student login</a
+                  >
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="#!">Teachers login</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header class="masthead">
+      <div
+        class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center"
+      >
+        <div class="d-flex justify-content-center">
+          <div class="text-center">
+            <h1 class="mx-auto my-0 text-uppercase">K K M M P T C</h1>
+            <h2 class="text-white-50 mx-auto mt-2 mb-5">About us</h2>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="mx-5 px-4 mt-4 bg-primay">
+      <div class="row">
+        <div class="col-12">
+          <div class="para-with-img">
+            <div class="image-container">
+              <img src="../img/aboutus.jpg" alt="" />
+            </div>
+            <p class="paragraph">
+              K Karunakaran Memorial Model Polytechnic College, Mala is running
+              under the Institute of Human Resource Development established by
+              Government of Kerala.<br />
+              <br />College offers three years Diploma courses in the field of
+              Computer Hardware Engineering, Computer Engineering, Electronics
+              Engineering and Biomedical Engineering. These courses are
+              affiliated to the Directorate of Technical Education, Kerala and
+              approved by All India Council For Technical Education (AICTE)<br />
+              <br />The institute is dedicated towards scientific advancement,
+              technological progress and economic growth of the country through
+              human resources development.<br />
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <p>
+            The Institution was started in 1993 with the special interest and
+            leadership of Sri. K.Karunakaran, former chief minister of Kerala
+            who represented Mala assembly constituency. We strive to uphold
+            professional leadership, competitive research and development for
+            social enhancement through innovative and dedicated teaching,
+            emphasizing human values.
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        Four departments are currently functioning in Model Polytechnic College,
+        Mala
+        <ul>
+          <li>
+            <strong>Computer Hardware Engineering</strong>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="login.html">Login</a>
+          <li>
+            <strong>Electronics Engineering </strong>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/client/components/gallery.html">gallery</a>
+          <li>
+            <strong> Computer Engineering </strong>
           </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              contact
-            </a>
+          <li>
+            <strong> Biomedical Engineering </strong>
           </li>
         </ul>
-
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
       </div>
     </div>
-  </nav>
-  <div>
-    <div class="page-header">
-      <h2 itemprop="name">
-        K.KARUNAKARAN MEMORIAL MODEL POLYTECHNIC COLLEGE MALA </h2>
+
+    <div class="container my-5">
+
+      
+      
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 
-    <div class="jsn-article-toolbar">
-      <div class="clearfix"></div>
-    </div>
-
-
-
-    <div class="articleBody" itemprop="articleBody">
-      <p> </p>
-      <div align="center">
-        <table style="width: 600px; border-color: #d9d4d4; margin-left: auto; margin-right: auto;" border="0"
-          cellspacing="0" cellpadding="0" align="center">
-          <tbody>
-            <tr style="border-color: #d9d4d4;">
-              <td style="border-color: #d9d4d4;" colspan="4" valign="top" width="275">
-                <p data-uw-styling-context="true">The Principal,<br /> K.Karunakaran Memorial <br /> Model Polytechnic
-                  College Mala, <br /> Kallettumkara P.O., Mala, <br /> Thrissur District. Pin – 680 683<br /> <br />
-                  Phone : 0480-2720746<br /> Mobile : 8547005080<br /> Email : <span
-                    style="text-decoration: underline;"><span id="cloakd14c0b09a0bfd98d8587b71d4bb1d7ba">This email
-                      address is being protected from spambots. You need JavaScript enabled to view it.</span>
-                    <script type='text/javascript'>
-                      document.getElementById('cloakd14c0b09a0bfd98d8587b71d4bb1d7ba').innerHTML = '';
-                      var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
-                      var path = 'hr' + 'ef' + '=';
-                      var addyd14c0b09a0bfd98d8587b71d4bb1d7ba = 'mptm&#97;l&#97;' + '&#64;';
-                      addyd14c0b09a0bfd98d8587b71d4bb1d7ba = addyd14c0b09a0bfd98d8587b71d4bb1d7ba + '&#105;hrd' + '&#46;' + '&#97;c' + '&#46;' + '&#105;n';
-                      var addy_textd14c0b09a0bfd98d8587b71d4bb1d7ba = 'mptm&#97;l&#97;' + '&#64;' + '&#105;hrd' + '&#46;' + '&#97;c' + '&#46;' + '&#105;n'; document.getElementById('cloakd14c0b09a0bfd98d8587b71d4bb1d7ba').innerHTML += '<a ' + path + '\'' + prefix + ':' + addyd14c0b09a0bfd98d8587b71d4bb1d7ba + '\' data-uw-styling-context="true">' + addy_textd14c0b09a0bfd98d8587b71d4bb1d7ba + '<\/a>';
-                    </script>
-                  </span><br /> website : <a href="http://mptmala.ihrd.ac.in" target="_blank" rel="noopener noreferrer"
-                    data-uw-styling-context="true">mptmala.ihrd.ac.in</a></p>
-              </td>
-              <td style="border-color: #d9d4d4;" colspan="2" valign="top" width="311">
-                <p> </p>
-              </td>
-            </tr>
-            <tr style="border-color: #d9d4d4;">
-              <td style="border-color: #d9d4d4;" colspan="6" valign="top" width="586">
-                <p> </p>
-              </td>
-            </tr>
-            <tr style="border-color: #d9d4d4;">
-              <td style="border-color: #d9d4d4;" colspan="6" valign="top" width="586">
-                <p style="text-align: justify;" data-uw-styling-context="true">Model Polytechnic College Mala is
-                  established in 1993, offers 3 year regular diploma courses in Electronics Engineering, Computer
-                  Hardware Engineering, Bio-Medical Engineering &amp; Computer Engineering affiliated to Board of
-                  Technical Education, Kerala.</p>
-              </td>
-            </tr>
-            <tr style="border-color: #d9d4d4;">
-              <td style="border-color: #d9d4d4;" colspan="6" valign="top" width="586">
-                <p> </p>
-              </td>
-            </tr>
-            <tr style="border-color: #d9d4d4;">
-              <td style="border-color: #d9d4d4;" rowspan="2" valign="top" width="146">
-                <p><strong data-uw-styling-context="true">Courses Offered</strong></p>
-              </td>
-              <td style="border-color: #d9d4d4;" colspan="4" valign="top" width="333">
-                <p><strong data-uw-styling-context="true"> Electronics Engineering </strong></p>
-              </td>
-              <td style="border-color: #d9d4d4;" valign="top" width="107">
-                <p><strong data-uw-styling-context="true"> (60 Seats)</strong></p>
-              </td>
-            </tr>
-            <tr style="border-color: #d9d4d4;">
-              <td style="border-color: #d9d4d4;" colspan="4" valign="top" width="333">
-                <p><strong data-uw-styling-context="true"> Computer Hardware Engineering </strong></p>
-              </td>
-              <td style="border-color: #d9d4d4;" valign="top" width="107">
-                <p><strong data-uw-styling-context="true"> (60 Seats)</strong></p>
-              </td>
-            </tr>
-            <tr style="border-color: #d9d4d4;">
-              <td style="border-color: #d9d4d4;" valign="top" width="146"> </td>
-              <td style="border-color: #d9d4d4;" colspan="4" valign="top" width="333">
-                <p><strong data-uw-styling-context="true"> Bio-Medical Engineering</strong></p>
-              </td>
-              <td style="border-color: #d9d4d4;" valign="top" width="107">
-                <p><strong data-uw-styling-context="true"> (60 Seats)</strong></p>
-              </td>
-            </tr>
-            <tr style="border-color: #d9d4d4;">
-              <td style="border-color: #d9d4d4;" valign="top" width="146"> </td>
-              <td style="border-color: #d9d4d4;" colspan="4" valign="top" width="333">
-                <p><strong data-uw-styling-context="true"> Computer Engineering</strong></p>
-              </td>
-              <td style="border-color: #d9d4d4;" valign="top" width="107">
-                <p><strong data-uw-styling-context="true"> (60 Seats)</strong></p>
-              </td>
-            </tr>
-            <tr style="border-color: #d9d4d4;">
-              <td style="border-color: #d9d4d4;" colspan="6" valign="top" width="586">
-                <p> </p>
-              </td>
-            </tr>
-            <tr style="border-color: #d9d4d4;">
-              <td style="border-color: #d9d4d4;" colspan="2" valign="top" width="214">
-                <p data-uw-styling-context="true">IHRD Courses</p>
-              </td>
-              <td style="border-color: #d9d4d4;" colspan="4" valign="top" width="372">
-                <p data-uw-styling-context="true"> DCA, PGDCA</p>
-              </td>
-            </tr>
-            <tr style="border-color: #d9d4d4;">
-              <td style="border-color: #d9d4d4;" colspan="6" valign="top" width="586">
-                <p> </p>
-              </td>
-            </tr>
-            <tr style="border-color: #d9d4d4;">
-              <td style="border-color: #d9d4d4;" colspan="2" valign="top" width="214">
-                <p data-uw-styling-context="true">Nearest Railway station</p>
-              </td>
-              <td style="border-color: #d9d4d4;" valign="top" width="22">
-                <p align="center" data-uw-styling-context="true">:</p>
-              </td>
-              <td style="border-color: #d9d4d4;" colspan="3" valign="top" width="350">
-                <p data-uw-styling-context="true"> Irinjalakkuda</p>
-              </td>
-            </tr>
-            <tr style="border-color: #d9d4d4;">
-              <td style="border-color: #d9d4d4;" colspan="2" valign="top" width="214">
-                <p data-uw-styling-context="true">Nearest Bus Station</p>
-              </td>
-              <td style="border-color: #d9d4d4;" valign="top" width="22">
-                <p align="center" data-uw-styling-context="true">:</p>
-              </td>
-              <td style="border-color: #d9d4d4;" colspan="3" valign="top" width="350">
-                <p data-uw-styling-context="true"> Kallettumkara</p>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </div>
-
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-
-<div class="outter">
-  
-    <div class="box">
-      <div class="inner"></div>
-      <!-- <div class="inner">hello</div> -->
-    </div>
-    
-</div>
-
-  <script src="../script/script.js">
-  </script>
-</body>
-
+    <script src="../script/script.js"></script>
+  </body>
 </html>
