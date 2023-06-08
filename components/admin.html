@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="../assets/fontawesome/css/all.css">
     <script src="../bootstrap/js/bootstrap.bundle.js"></script>
+    <script src="../script/ajax/jquery.js"></script>
     <title>Admin dashboard</title>
 </head>
 <body>
@@ -23,15 +24,125 @@
             </div>
           </div>
       </nav>
-
-    <div class="container mt-5 d-flex justify-content-center w-75">
-       <div class="border border-5 rounded-5 w-75 d-flex flex-row"> 
-        <input type="text" placeholder="Search Student" id="search" class="form-control border rounded-5 border-0 text-secondary" style="outline: none; outline-color: ;">
-        <button class="btn ms-2 btn-light border border-0 rounded-5"><i class="fa-solid fa-magnifying-glass text-primary"></i></button>
+<div class="container" id="alert-msg"></div>
+<form id="search-form"> 
+    <div class="container mt-5 d-flex flex-column justify-content-center w-50">
+        <div class="border border-5 rounded-5 w-75 d-flex flex-row"> 
+            <input type="text" placeholder="Search by register number" id="search" class="form-control border rounded-5 border-0 text-secondary" style="outline: none;">
+            <button type="submit" class="btn ms-2 btn-light border border-0 rounded-5"><i class="fa-solid fa-magnifying-glass text-primary"></i></button>
+        </div>
     </div>
+</form>
+
+    <div class="container mt-5">
+        <h3 class="text-secondary text-center">Student details</h3>
+
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-8 shadow rounded border border-1 mt-3">
+               <div class="row">
+                <div class="col-4 border border-start-0 border-top-0 border-bottom-0">
+                    <img id="image" class="rounded ms-3 my-3" width="80%" src="../assets/profile-image.png" alt="">
+                </div>
+                <!-- <div class="col-1"></div> -->
+                <div class="col-8 p-3">
+                  <h6 class="text-secondary text-center">Details</h6>
+                    <div class="row">
+                        <div class="col-3"><h5 class="text-secondary">Name <i class="fa-solid fa-user"></i></h5></div>
+                        <div class="col-9"><h5 class="text-secondary" id="name">------</h5></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-3"><h5 class="text-secondary">Reg no <i class="fa-solid fa-hashtag"></i></h5></div>
+                        <div class="col-9"><h5 class="text-secondary" id="regno">------</h5></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-3"><h5 class="text-secondary">Branch <i class="fa-solid fa-chalkboard"></i></h5></div>
+                        <div  class="col-9"><h5 class="text-secondary" id="branch">------</h5></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-3"><h5 class="text-secondary ">Phone <i class="fa-solid fa-mobile-screen"></i></h5></div>
+                        <div class="col-9"><h5 class="text-secondary" id="phone">------</h5></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-3"><h5 class="text-secondary">Email <i class="fa-regular fa-envelope"></i></h5></div>
+                        <div class="col-9"><h5 class="text-secondary" id="email">------</h5></div>
+                    </div>
+
+                </div>
+               </div>
+            </div>
+            <div class="col-2"></div>
+        </div>
+        <div class="row mx-5 mt-5 mb-4">
+            <h5 class="text-secondary ms-4 text-center">Enter semester details</h5> 
+            
+            <div class="row p-3">
+                <div class="col-2"></div>
+                <div class="col-8 p-2">
+                    <div class="d-flex align-items-center"> 
+                        <label for="sem"><h6 class="text-secondary">Enter semester</h6></label> 
+                        <select class="form-control w-50 ms-3 border-2" id="semester-select">
+                            <option value="Semester 1">Semester 1  </option>
+                            <option value="Semester 2">Semester 2  </option>
+                            <option value="Semester 3">Semester 3  </option>
+                            <option value="Semester 4">Semester 4  </option>
+                            <option value="Semester 5">Semester 5  </option>
+                            <option value="Semester 6">Semester 6  </option>
+                        </select>
+                    </div>
+                    <h6 class="text-secondary mt-4">Enter subject and marks</h6>
+                   <div id="add-subject-section" class="row">
+
+                        <div class="row mt-3 py-3 shadow rounded border border-1" data-custom='row'>
+                            <div class="col-6 "><input data-custom='subject' type="text" class="form-control" placeholder="Subject"></div>
+                            <div class="col-6 d-flex gap-2">
+                                <input data-custom='mark' type="text" class="form-control w-50" placeholder="Mark">
+                                <input data-custom='cmark' type="text" class="form-control w-50" placeholder="Cmark">
+                            </div> 
+                        </div>
+                       
+                   </div>
+
+                   <div class="d-flex w-100 justify-content-end mt-4">
+                    <button add class="btn btn-success ms-3">Add <i class="fa-solid fa-plus"></i></button>
+                    <!-- <button cancle class="btn btn-danger ms-2"><i class="fa-solid fa-xmark"></i></button> -->
+                </div>
+                <div class="d-flex justify-content-center w-100" id="update-status"> 
+                    
+                </div>
+                   <div class="row flex-row d-flex justify-content-end mt-4">
+                        <button id="update-btn" class="btn btn-success w-25 me-4">Update <span id="loader"><i class="fa-solid fa-cloud-arrow-up"></i></span></button>
+                        <button class="btn btn-danger w-25" data-bs-toggle="modal" data-bs-target="#resetmodal">Reset <i class="fa-solid fa-rotate"></i></button>
+
+                   </div>
+                </div>
+                <div class="col-2">
+                    
+                </div>
+            </div>
+        </div>
     </div>
 
-    <div class="container mt-5"><h3 class="text-secondary text-center">Student details</h3></div>
+    <!-- Modal -->
+<div class="modal fade" id="resetmodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header border-0">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <h1 class="modal-title fs-5" id="exampleModalLabel"> Are you sure want to reset 
+                <i class="fa-solid fa-triangle-exclamation text-warning"></i> </h1>
+           
+        </div>
+        <div class="modal-footer border-0">
+          <button type="button" class="btn btn-success" data-bs-dismiss="modal">No</button>
+          <button type="button" class="btn btn-danger" onclick="window.location.reload()">Yes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+    <script src="../services/services2.js"></script>
     <script src="../script/admin.js"></script>
 </body>
 </html>

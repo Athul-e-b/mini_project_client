@@ -11,22 +11,101 @@
     <title>Gallery</title>
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg bg-primary position-sticky top-0">
-    <div class="container-fluid">
-      <a class="navbar-brand text-light">Profile <i class="fa-solid fa-user-tie"></i> </a>
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top " id="mainNav" style="position: fixed; background-color: rgb(176, 226, 255);opacity: 0.7;">
 
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+    <div class="container px-4 px-lg-5">
+      <a class="navbar-brand text-light" href="#page-top"><img src="/client/img/logo.png" alt=""></a>
+      <button
+        class="navbar-toggler navbar-toggler-right"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarResponsive"
+        aria-controls="navbarResponsive"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        Menu
+        <i class="fas fa-bars"></i>
       </button>
+      <a class="navbar-brand text-dark-emphasis" href="/client/index.html">Home</a>
+      <div  class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a 
+              class="nav-link text-dark-emphasis"
+              href="/client/components/about.html"
+              >About</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link text-dark-emphasis"
+              href="/client/components/gallery.html"
+              >Gallery</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link text-dark-emphasis"
+              href="/client/components/contact.html"
+              >contact</a
+            >
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle text-dark-emphasis"
+              id="navbarDropdown"
+              href="#"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+              >Profile</a
+            >
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li>
+                <a class="dropdown-item" href="components/principal.html"
+                  >principal</a
+                >
+              </li>
 
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav ms-auto">
-          <a class="nav-link text-light" aria-current="page" href="../index.html">Home</a>
-          <a class="nav-link text-light" href="gallery.html">Gallery</a>
-          <a class="nav-link text-light" href="update.html">Update details</a>
-          <a class="nav-link text-light" data-bs-toggle="modal" data-bs-target="#exampleModal">Log out</a>
-        </div>
+              <li>
+                <a
+                  class="dropdown-item"
+                  href="/client/components/admission.html"
+                  >Admission</a
+                >
+              </li>
+
+              <li>
+                <a class="dropdown-item" href="./components/Management.html"
+                  >Management</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle text-dark-emphasis"
+              id="navbarDropdown"
+              href="#"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+              >Login</a
+            >
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li>
+                <a class="dropdown-item" href="components/login.html"
+                  >Student login</a
+                >
+              </li>
+              <li><hr class="dropdown-divider" /></li>
+              <li><a class="dropdown-item" href="/client/components/admin.html">Admin login</a></li>
+            </ul>
+          </li>
+        </ul>
       </div>
+    </div>
   </nav>
 
 <!-- Gallery -->

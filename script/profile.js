@@ -1,5 +1,6 @@
 import {getDetails} from '../services/service.js'
 import studentMath from '../services/galaryImages.js'
+let studentMark = []
 document.getElementById("logout-btn").addEventListener('click',()=>{
     window.localStorage.setItem("id","")
     window.location = '../index.html' 
@@ -10,6 +11,7 @@ window.addEventListener('load',async()=>{
     if(window.localStorage.getItem("id") !== ""){
         try{
             const result = await getDetails(window.localStorage.getItem('id'))
+            console.log(result);
             result.data?.photo !== "" || result.data?.photo
             ? profileImage.src = 'http://localhost:8080/MINI%20PROJECTS/server/liveFile.php?data=' + result.data?.photo
             : profileImage.src = "../assets/profile-image.png";
@@ -22,6 +24,10 @@ window.addEventListener('load',async()=>{
               document.getElementById("phone").innerText = result.data?.phone
               document.getElementById("email").innerText = result.data?.email
               document.getElementById("address").innerText = result.data?.address
+              result.data.mark === "" ? studentMark = [] : studentMark = JSON.parse(result.data.mark)
+              createMarkTable(studentMark)
+              console.log(studentMark);
+
            }catch(err){
               console.log(err);
            }
@@ -56,7 +62,7 @@ function createThead(){
    theadTag.append(trTag)
    return theadTag
 }
- const semester1 = studentMath[1].mark_details
+
 
 function createTbody(allMarks){
    const tbodyTag = document.createElement('tbody')
@@ -81,7 +87,7 @@ function createMarkTable(markDetails){
         rowTag.classList.add('row')
         const heading = document.createElement('h5')
         heading.classList.add('text-primary','text-center')
-        heading.innerText = 'Semester ' + elem?.sem.toString()
+        heading.innerText = elem?.sem
         const tableTag = document.createElement('table')
         tableTag.classList.add('table','table-striped')
         const tableHead = createThead()
@@ -92,4 +98,5 @@ function createMarkTable(markDetails){
     })
   console.log(root);  
 }
-createMarkTable(studentMath)
+
+console.log(studentMark);
